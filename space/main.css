@@ -1,0 +1,164 @@
+@import url( "https://fonts.googleapis.com/css?family=Nunito" );
+
+body {
+  font-family : "Nunito", sans-serif;
+  background : #eee;
+  color : #444;
+ }
+
+/* /////////////////////////////// TAG STRUCTURE /////////////////////////// */
+
+/* / / / / / / / / / / / / / / / / / / MAIN / / / / / / / / / / / / / / / / /*/
+html {
+/*  background-color: #eee;*/
+}
+
+/* /////////////////////////////// CLASS STRUCTURE ///////////////////////// */
+.tri-bx {
+  position: relative;
+  top: 0.5rem;
+  transform: rotate( 0 );
+}
+.tri {
+  padding: 0rem;
+  border-top-width: 1rem;
+  border-right-width: 1rem;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: #444;
+  transform: rotate( 45deg );
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+footer {
+  margin: auto;
+  font-size: 0.7rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mask {
+  pointer-events: none;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 5rem;
+  background-color: #f5f5f5;
+  opacity: 0.9;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 1s;
+}
+.circle:hover {
+  background-color: #fff !important;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX( -50% );
+  z-index: 1000
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 2rem solid transparent;
+  border-right: 2rem solid transparent;
+  border-bottom: 2rem solid #d9d9d9;
+  transform: scaleX( 0.5 ) translateY( -0.125rem )
+}
+
+.downArrow {
+  transform: rotate( 180deg )
+}
+.leftArrow {
+  transform: rotate( -90deg );
+  position: absolute;
+  bottom: 0;
+  left: -100%
+}
+.rightArrow {
+  transform: rotate( 90deg );
+  position: absolute;
+  bottom: 0;
+  left: 100%
+}
+
+/* /////////////////////////////// TRANSITIONS ///////////////////////////// */
+.tri-bx {
+/*  transition: all 1s;*/
+}
+
+/* /////////////////////////////// ANIMATIONS ////////////////////////////// */
+
+/* / / / / / / / / / / / / / ANIMATION DEFINITIONS / / / / / / / / / / / / / */
+.blink, .expand {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier( 0.45, 0, 0, 2 );
+}
+.blink {
+  animation-name: blink;
+}
+.expand {
+  animation-name: expand;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier( 0.45, 0, 0, 2 );
+  animation-fill-mode: forwards;
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+/*/ / / / / / / / / / / / / / ANIMATION KEYFRAMES / / / / / / / / / / / / / /*/
+@keyframes pulse {
+  50% {
+    background-color: #a5f1ff;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: #eee;
+  }
+}
+@keyframes expand {
+  100% {
+    padding: 1rem;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
