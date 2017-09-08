@@ -1,0 +1,1131 @@
+// \\ -------- IMPORTS ----------------------------------------------------- //
+@import url( "https://necolas.github.io/normalize.css/latest/normalize.css" );
+@import url( "https://fonts.googleapis.com/css?family=Nunito" );
+@import url( "https://fonts.googleapis.com/css?family=Open+Sans:400,700" );
+@import 'main';
+@import 'viewport';
+@import 'animations';
+
+  // \\ - - - - - - - - FONTS - - - - - - - - - - - - - - - - - - - - - - -- //
+  @font-face {
+    font-family: "Helvetica Neue";
+    src: url( "../res/fonts/Helvetica-Neue.ttf" ) format( "truetype" );
+  }
+
+// \\ ----- INITIAL RULES -------------------------------------------------- //
+::selection {
+  background-color: #0ef;
+}
+
+// \\ ------ CSS OUTLINE --------------------------------------------------- //           //OUTLINE
+
+  // \\ - - - - - - - - - UI - - - - - - - - - - - - - - - - - - - - - - - - //           //  UI
+                                                                                          //  BASIC BOX
+      // \\   -   -   -   -   -   -   BOX SIZING   -   -   -   -   -   -   - //           //  CONTENT
+      * {                                                                                 //  ANIMATIONS
+        //box-sizing: content-box; //default                                              //  AUXILIARY    
+        box-sizing: border-box;                
+        //outline: 1px #f00 solid; //toggle to see elements 
+      }                                                                                   //LVL2 OUTLINE
+                                                                                            
+      // \\ -   -   -   -   -   -   -   CONTENT    -   -   -   -   -   -   - //           //  UI
+      .b4::before {                                                                       //    BOX SIZING
+        //content: initial; //default                                                     //    CONTENT
+        content: 'before\00bb';                                                           //    TOUCH ACTION
+      }                                                                                   //    POINTER EVENTS
+      .aftr::after {                                                                      //    CURSOR
+        content: '\00ab after';                                                           //    RESIZE
+      }                                                                                   //    OVERFLOW
+                                                                                          //    OVERFLOW-X
+      // \\   -   -   -   -   -   -   TOUCH ACTION    -   -   -   -   -   -- //           //    OVERFLOW-Y
+      .pan-x {                                                                            //  BASIC BOX
+        touch-action: pan-x;                                                              //    VISUAL
+      }                                                                                   //    FLEXBOX
+      .pan-y {                                                                            //    DIMENSIONS
+        touch-action: pan-y;                                                              //    SPACE
+      }                                                                                   //    POSITIONING
+      .pch-zm {                                                                           //    TRANSFORMS
+        touch-action: pinch-zoom;                                                         //    AESTHETICS
+      }                                                                                   //    CLIP
+      .pan-up {                                                                           //  CONTENT
+        touch-action: pan-up;                                                             //    MISC
+        //touch-action: pan-right;                                                        //    FONT
+        //touch-action: pan-down;                                                         //    TEXT
+        //touch-action: pan-left;
+      }
+      .tch {
+        touch-action: auto; //default
+      }
+
+      // \\  -   -   -   -   -   -   POINTER EVENTS    -   -   -   -   -   - //
+      .ptr-evts-off {
+        pointer-events: none;
+      }
+      .ptr-evts {
+        pointer-events: auto; //default
+      }
+
+      // \\ -   -   -   -   -   -   -   CURSOR    -   -   -   -   -   -   -- //
+      .cur {
+        cursor: default; //default
+      }
+      .cur-ptr {
+        cursor: pointer;
+      }
+
+      // \\ -   -   -   -   -   -   -   RESIZE    -   -   -   -   -   -   -- //
+      .resz {
+        resize: none; //default
+      }
+      .resz-bth {
+        resize: both;
+      }
+
+      // \\ -  -   -   -   -   -   -   OVERFLOW    -   -   -   -   -   -   - //
+      .ovf {
+        overflow: auto; //default;
+      }
+      .ovf-hdn {
+        overflow: hidden;
+      }
+      .ovf-srl {
+        overflow: scroll;
+      }
+
+      // overflow-x //
+      .ovf-x {
+        overflow-x: auto; //default;
+      }
+      .ovf-x-hdn {
+        overflow-x: hidden;
+      }
+      .ovf-x-srl {
+        overflow-x: scroll;
+      }
+
+      // overflow-y //
+      .ovf-y {
+        overflow-y: auto; //default;
+      }
+      .ovf-y-hdn {
+        overflow-y: hidden;
+      }
+      .ovf-y-srl {
+        overflow-y: scroll;
+      }
+  // \\ -- - - - - - - BASIC BOX - - - - - - - - - - - - - - - - - - - - - - //
+
+    // \\  -  -  -  -  -  -  -  VISUAL  -  -  -  -  -  -  -  -  -  -  -  - - //
+
+      // \\ -   -   -   -   -   -   -   DISPLAY   -   -   -   -   -   -   -  //
+      .rmv {
+        display: none;
+      }
+      .blc {
+        display: block;
+      }
+      .inl {
+        display: inline;
+      }
+      .inl-blc {
+        display: inline-block;
+      }
+      .flx {
+        display: flex;
+      }
+      .inl-flx {
+        display: inline-flex;
+      }
+
+      // \\   -   -   -   -   -   -   VISIBILITY    -   -   -   -   -   -  - //
+      .vis {
+        visibility: visible; //default
+      }
+      .vis-hid {
+        visibility: hidden;
+      }
+
+    // \\ -  -  -  -  -  -  -  FLEX BOX  -  -  -  -  -  -  -  -  -  -  -  -  //
+
+      // \\ -   -   -   -   -   -   FLEX DIRECTION    -   -   -   -   -   -  //
+      .row {
+        flex-direction: row; //default
+      }
+      .col {
+        flex-direction: column;
+      }
+      .row-rv {
+        flex-direction: row-reverse;
+      }
+      .col-rv {
+        flex-direction: column-reverse;
+      }
+
+      // \\ -  -   -   -   -   -   -   FLEX WRAP    -   -   -   -   -   -  - //
+      .flx-wrp {
+        flex-wrap: nowrap; //default
+      }
+      .wrp {
+        flex-wrap: wrap;
+      }
+      .wrp-rv {
+        flex-wrap: wrap-reverse;
+      }
+
+      // \\ -  -   -   -   -   -   -   FLEX GROW    -   -   -   -   -   -  - //
+      .grw {
+        flex-grow: 0; //default
+      }
+
+      // \\   -   -   -   -   -   -   FLEX SHRINK    -   -   -   -   -   -   //
+      .shrn {
+        flex-shrink: 1; //default
+      }
+
+      // \\-   -   -   -   -   -   -   FLEX BASIS    -   -   -   -   -   -   //
+      .fkx-bsis {
+        flex-basis: auto; //default
+      }
+      .bsis1 {
+        flex-basis: 1rem; 
+      }
+
+      // \\   -   -   -   -   -   -   -   FLEX   -   -   -   -   -   -   -   //
+      .flex {
+        flex: 0 1 auto //flex-grow | flex-shrink | flex-basis
+      }
+
+      // \\ -  -   -   -   -   -   -   FLEX FLOW    -   -   -   -   -   -  - //
+      .flx-flo {
+        flex-flow: row nowrap //flex-direction | flex-wrap
+      }
+
+      // \\ -   -   -   -   -   -   JUSTIFY CONTENT    -   -   -   -   -   - //
+      .j-cnt {
+        justify-content: flex-start //default
+      }
+      .j-end {
+        justify-content: flex-end
+      }
+      .j-cntr {
+        justify-content: center;
+      }
+      .j-spc-arnd {
+        justify-content: space-around;
+      }
+      .j-spc-btwn {
+        justify-content: space-between;
+      }
+  
+      // \\   -   -   -   -   -   -   ALIGN ITEMS    -   -   -   -   -   -   //
+      .aln-itms {
+        align-items: stretch; //default
+      }
+      .aln-strt {
+        align-items: flex-start;
+      }
+      .aln-end {
+        align-items: flex-end;
+      }
+      .aln-bse {
+        align-items: baseline;
+      }
+
+      // \\   -   -   -   -   -   -   ALIGN SELF    -   -   -   -   -   --   //
+      .aln-slf {
+        align-self: auto; //default
+      }
+      .aln-slf-strc {
+        align-self: stretch;
+      }
+      .aln-slf-strt {
+        align-self: flex-start;
+      }
+      .aln-slf-end {
+        align-self: flex-end;
+      }
+      .aln-slf-cntr {
+        align-self: center;
+      }
+      .aln-slf-bse {
+        align-self: baseline;
+      }
+
+      // \\  -   -   -   -   -   -   ALIGN CONTENT    -   -   -   -   -   -  //
+      .aln-cnt {
+        align-content: stretch; //default
+      }
+      .aln-cnt-strt {
+        align-content: start;
+      }
+      .aln-cnt-end {
+        align-content: end;
+      }
+      .aln-cnt-cntr {
+        align-content: center;
+      }
+      .aln-cnt-arnd {
+        align-content: space-around;
+      }
+      .aln-cnt-btwn {
+        align-content: space-between;
+      }
+
+      // \\ -    -   -   -   -   -   -   ORDER    -   -   -   -   -   -   -  //
+      .odr {
+        order: 0; //default
+      }
+
+    // \\ - -  -  -  -  -  -  DIMENSIONS  -  -  -  -  -  -  -  -  -  -  -  - //
+
+      // \\ -  -   -   -   -   -   -   MAX WIDTH    -   -   -   -   -   -  - //
+      .mx-wh {
+        max-width: none; //default
+      }
+      .mx-wh-1hp {
+        max-width: 100%;
+      }
+
+      // \\ -  -   -   -   -   -   -   MAX HEIGHT    -   -   -   -   -   - - //
+      .mx-ht-1hp {
+        max-height: none; //default
+      }
+      .mx-ht-1hp {
+        max-height: 100%;
+      }
+
+      // \\ -  -   -   -   -   -   -   MIN WIDTH    -   -   -   -   -   -  - //
+      .mn-wh {
+        min-width: 0; //default
+      }
+      .mn-wh-1 {
+        min-width: 1rem;
+      }
+
+      // \\ -  -   -   -   -   -   -   MIN HEIGHT    -   -   -   -   -   - - //    
+      .mn-ht {
+        min-height: 0; //default
+      }
+      .mn-ht-1 {
+        min-height: 1rem;
+      }
+
+      // \\  -   -   -   -   -   -   -   WIDTH    -   -   -   -   -   -   -  //
+      .wh {
+        width: auto; //default
+      }
+      .wh-1hp {
+        width: 100%;
+      }
+
+      // \\  -   -   -   -   -   -   -   HEIGHT    -   -   -   -   -   -  -  //
+      .ht {
+        height: auto; //default
+      }
+      .ht-1hp {
+        height: 100%;
+      }
+
+    // \\ - -  -  -  -  -  -  -  SPACE  -  -  -  -  -  -  -  -  -  -  -  - - //
+
+      // \\  -   -   -   -   -   -   -   MARGIN    -   -   -   -   -   -  -  //
+      .mrg {
+        margin: 0; //default
+      }
+      .mrg-1 {
+        margin: 1rem 1rem 1rem 1rem; //top right bottom left
+                                     //top,bottom right,left
+                                     //top right,left bottom
+      }
+      .mrg-top {
+        margin-top: 0; //default
+      }
+      .mrg-rt {
+        margin-right: 0; //default
+      }
+      .mrg-btm {
+        margin-bottom: 0; //default
+      }
+      .mrg-lt {
+        margin-left: 0; //default
+      }
+
+      // \\  -   -   -   -   -   -   -   PADDING    -   -   -   -   -   -  - //
+      .pad {
+        padding: 0; //default
+      }
+      .pad-1 {
+        padding: 1rem; //top right bottom left
+                       //top,bottom right,left
+                       //top right,left bottom
+      }
+      .pad-top {
+        padding-top: 0; //default
+      }
+      .pad-rt {
+        padding-right: 0; //default
+      }
+      .pad-btm {
+        padding-bottom: 0; //default
+      }
+      .pad-lt {
+        padding-left: 0; //default
+      }
+
+    // \\ - -  -  -  -  -  -  POSITIONING  -  -  -  -  -  -  -  -  -  -  - - //
+
+      // \\   -   -   -   -   -   -   VERTICAL ALIGN    -   -   -   -   -  - //
+      .vt-aln {
+        vertical-align: baseline; //default
+      }
+      .vt-aln {
+        vertical-align: 1rem;
+      }
+      .vt-aln-top {
+        vertical-align: top;
+      }
+      .vt-aln-mid {
+        vertical-align: middle;
+      }
+      .vt-aln-btm {
+        vertical-align: bottom;
+      }
+      .vt-aln-t-btm {
+        vertical-align: text-bottom;
+      }
+
+      // \\   -   -   -   -   -   -   -   FLOAT    -   -   -   -   -   -   - //
+      .flt {
+        float: none; //default
+      }
+      .flt-lt {
+        float: left;
+      }
+      .flt-rt {
+        float: left;
+      }
+
+      // \\   -   -   -   -   -   -   -   CLEAR    -   -   -   -   -   -   - //
+      .clr {
+        clear: none; //default
+      }
+      .clr {
+        clear: both;
+      }
+      .clr-lt {
+        clear: left;
+      }
+      .clr-rt {
+        clear: left;
+      }
+
+      // \\  -   -   -   -   -   -   -   POSITION    -   -   -   -   -   - - //
+      .pos {
+        position: static; //default
+      }
+      .pos-rel {
+        position: relative;
+      }
+      .pos-abs {
+        position: absolute;
+      }
+      .pos-fix {
+        position: fixed;
+      }
+
+      // \\ -   -   -   -   -   -   -   -   TOP    -   -   -   -   -   -   - //
+      .top {
+        top: auto; //default
+      }
+      .top-1 {
+        top: 1rem;
+      }
+
+      // \\   -   -   -   -   -   -   -   RIGHT    -   -   -   -   -   -   - //
+      .rt {
+        right: auto; //default
+      }
+      .rt-1 {
+        right: 1rem;
+      }
+
+      // \\  -   -   -   -   -   -   -   BOTTOM    -   -   -   -   -   -   - //
+      .btm {
+        bottom: auto; //default
+      }
+      .btm-1 {
+        bottom: 1rem;
+      }
+
+      // \\ - -   -   -   -   -   -   -   LEFT    -   -   -   -   -   -  - - //
+      .lt {
+        left: auto; //default
+      }
+      .lt-1 {
+        left: 1rem;
+      }
+
+      // \\ - -  -   -   -   -   -   -   Z-INDEX    -   -   -   -   -   -  - //
+      .z-indx {
+        z-index: auto; //default
+      }
+      .z-indx-1 {
+        z-index: 1;
+      }
+
+    // \\ -  -  -  -  -  -  -  TRANSFORMS  -  -  -  -  -  -  -  -  -  -  - - //
+
+      // \\ -   -   -   -   -   -   -   TRANSFORM    -   -   -   -   -   - - //
+      
+      // transform: translate //
+      .trfm {
+        transform: none; //default
+      }
+
+        // centering //
+      .trfm-cntr {
+        transform: translate( -50%, -50% );
+      }
+      .trfm-cntr-x {
+        transform: translateX( -50% );
+      }
+      .trfm-cntr-y {
+        transform: translateY( -50% );
+      }
+      
+        // perspective //
+      .trns-z {
+        transform: perspective( 10rem ) translateZ( 1rem );
+      }
+      .trns-3d {
+        transform: perspective( 10rem ) translate3d( 1rem, 1rem, 1rem );//x,y,z
+      }
+
+        // transform: scale //
+      .scl {
+        transform: scale( 1.1 );
+      }
+      .scl-x {
+        transform: scaleX( 1.1 );
+      }
+      .scl-y {
+        transform: scaleY( 1.1 );
+      }
+      .scl-3d {
+        transform: scale3d( 1, 5, 10 );
+      }
+      
+      // transform: rotate //
+      .rot {
+        transform: rotate( -90deg );
+      }
+      .rot-x {
+        transform: perspective( 10rem ) rotateX( -45deg );
+      }
+      .rot-y {
+        transform: perspective( 10rem ) rotateY( 45deg );
+      }
+
+      // transform: skew //
+      .skw {
+        transform: skew( 10deg, 10deg );
+      }
+      .skw-x {
+        transform: skewX( 10deg );
+      }
+      .skw-y {
+        transform: skewY( 10deg );
+      }
+
+      // perspective //
+      .persp {
+        transform: perspective( 10rem );
+      }
+
+      // matrix //
+      .mtx {
+//        transform: matrix( 1, 0, 0, 1, 0, 0 ); //default
+        transform: matrix( 1, 2, 3, 1, 2, 3 );  //a, b, c, d, e, f 
+        //scale( a, d ) | skew( b, c ) | translate( e, f ) 
+      }
+      .mtx-3d {
+//        transform: matrix3D(
+//          1, 0, 0, 0, 
+//          0, 1, 0, 0, 
+//          0, 0, 1, 0, 
+//          0, 0, 0, 1
+//        ); //default
+        transform:  perspective( 10rem )
+                    matrix3D(
+                      1, 0.25, 0.5, 0.0075,
+                      0.25 , 2, 2, 0.02,
+                      1, 2, 3, 4,
+                      1, 2, 3, 0.75
+                    );
+        //matrix3d( 
+        //  a1, b1, c1, d1,
+        //  a2, b2, c2, d2, 
+        //  a3, b3, c3, d3,
+        //  a4, b4, c4, d4
+        //)
+      }
+
+      // \\  -   -   -   -   -   -   TRANSFORM ORIGIN    -   -   -   -   - - //
+      
+      .trfm-org {
+        transform-origin: none; //default
+      }
+
+    // \\ -  -  -  -  -  -  -  ASTHETICS  -  -  -  -  -  -  -  -  -  -  -  - //
+
+  // \\ - - - - - - - - CONTENT - - - - - - - - - - - - - - - - - - - - - -- //
+
+  // \\ -- - - - - - - ANIMATIONS - - - - - - - - - - - - - - - - - - - - -- //
+
+
+
+
+.clr-fix::after,
+.cnt {                                             
+  content: "";                                             /* << content: "" */
+}
+
+/* ******************************************************* */
+.hide, 
+.ptr-evts-none {   
+  pointer-events: none;                           /* << pointer-events: none */
+}
+.show,
+.ptr-evts-auto {   
+  pointer-events: auto;                           /* << pointer-events: auto */
+}
+.ptr-evts-all {   
+  pointer-events: all;                             /* << pointer-events: all */
+}
+
+/*\  \  \  \  \  \  \  \  \  \  \  \  POINTER  /  /  /  /  /  /  /  /  /  /  */
+button, 
+.cur-pointer {                                             
+  cursor: pointer;                                     /* << cursor: pointer */
+}
+.cur-def {                                             
+  cursor: default;                                     /* << cursor: default */
+}
+
+/*\  \  \  \  \  \  \  \  \  \  \  \  RESIZE  /  /  /  /  /  /  /  /  /  /  /*/
+iframe, 
+.resize-both {
+  resize: both;                                           /* << resize: both */
+}
+.resize-none {
+  resize: none;                                           /* << resize: none */
+}
+.resize-h {
+  resize: horizontal;                               /* << resize: horizontal */
+}
+.resize-v {
+  resize: vertical;                                   /* << resize: vertical */
+}
+
+/*  \  \  \  \  \  \  \  \  \  \  \  OVERFLOW  /  /  /  /  /  /  /  /  /  /  */
+.ovr-flo-hdn {                                            
+  overflow: hidden;                                   /* << overflow: hidden */
+}
+.ovr-flo-vis {                                            
+  overflow: visible;                                 /* << overflow: visible */
+}
+.ovr-flo-vis {                                            
+  overflow-x: scroll;                               /*  */
+}
+.ovr-flo-vis {                                            
+  overflow-y: scroll;                               /*  */
+}
+
+/*\  \  \  \  \  \  \  \  \  \  \  \  DISPLAY  /  /  /  /  /  /  /  /  /  /  */
+
+/*\   \   \   \   \   \   \   \   \   COMMON   /   /   /   /   /   /   /   / */
+.clr-fix::after,
+.dsp-block {            
+  display: block;                 /* << clr-fix = clear fix | display: block */
+}
+.dsp-in-block {            
+  display: inline-block;                         /* << display: inline-block */
+}
+.dsp-none {                                                
+  display: none;                                         /* << display: none */
+}
+.dsp-table-cell {                                                
+  display: table-cell;                             /* << display: table-cell */
+}
+
+/*\   \   \   \   \   \   \   \   \   FLEXBOX   /   /   /   /   /   /   /   /*/
+.dsp-flx,
+.cntr-ch {            
+  display: flex;                                         /* << display: flex */
+}
+.dsp-in-flx {            
+  display: inline-flex;                           /* << display: inline-flex */
+}
+
+/*\  \  \  \  \  \  \  \  \  \  \  \  FLEXBOX  /  /  /  /  /  /  /  /  /  /  */
+
+/* \   \   \   \   \   \   \   \   FLEX DIRECTION   /   /   /   /   /   /   /*/
+.cntr-ch,
+.flx-dir-row {            
+  flex-direction: row;                             /* << flex-direction: row */
+}
+.flx-dir-col {            
+  flex-direction: column;                       /* << flex-direction: column */
+}
+
+/*\   \   \   \   \   \   \   \   JUSTIFY CONTENT   /   /   /   /   /   /   /*/
+.jst-cnt-btwn {
+  justify-content: space-between;       /* << justify-content: space-between */
+}
+.jst-cnt-arnd {
+  justify-content: space-around;         /* << justify-content: space-around */
+}
+.jst-cnt-start {
+  justify-content: flex-start;             /* << justify-content: flex-start */
+}
+.jst-cnt-end {
+  justify-content: flex-end;                      /* << justify-content: end */
+}
+.cntr-ch,
+.jst-cnt-cntr {
+  justify-content: center;                     /* << justify-content: center */
+}
+
+/*  \   \   \   \   \   \   \   \   ALIGN ITEMS   /   /   /   /   /   /   /  */
+.cntr-ch,
+.aln-itms-cntr {
+  align-items: center;                             /* << align-items: center */
+}
+.aln-itms-start {
+  align-items: flex-start;                      /* << align-self: flex-start */
+}
+.aln-itms-end {
+  align-items: flex-end;                          /* << align-self: flex-end */
+}
+.aln-slf-start {
+  align-self: flex-start;                       /* << align-self: flex-start */
+}
+.aln-slf-end {
+  align-self: flex-end;                           /* << align-self: flex-end */
+}
+
+/* */
+
+#element {
+  flex-wrap: wrap;
+}
+#element {
+  align-content: center;
+}
+#element {
+  order: 1;
+}
+#element {
+  flex-grow: 1;
+}
+#element {
+  flex-shrink: 1;
+}
+#element {
+  flex-basis: 1;
+}
+#element {
+  flex: 1;
+}
+#element {
+  flex-flow: row
+}
+
+/*  \  \  \  \  \  \  \  \  \  \  \  DIMENSIONS  /  /  /  /  /  /  /  /  /  /*/
+
+/*   \   \   \   \   \   \   \   \   MAX / MIN   /   /   /   /   /   /   /   */
+
+/*   \    \    \    \    \    \    \    MAX    /    /    /    /    /    /    */
+img,
+.max-wh-100 {                                                      
+  max-width: 100%;                                     /* << max-width: 100% */
+}
+.max-ht-100 {                                                
+  max-height: 100%;                                   /* << max-height: 100% */
+}
+.max-wh-init {                                                      
+  max-width: initial;                               /* << max-width: initial */
+}
+.max-ht-init {                                                      
+  max-height: initial;                             /* << max-height: initial */
+}
+
+/*   \    \    \    \    \    \    \    MIN    /    /    /    /    /    /    */
+.min-wh-100 {                                                      
+  min-width: 100%;                                     /* << max-width: 100% */
+}
+.min-ht-100 {                                                
+  min-height: 100%;                                   /* << max-height: 100% */
+}
+.min-wh-init {                                                      
+  min-width: initial;                               /* << max-width: initial */
+}
+.min-ht-init {                                                      
+  min-height: initial;                             /* << max-height: initial */
+}
+
+/* \   \   \   \   \   \   \   \   \   WIDTH   /   /   /   /   /   /   /   / */
+img,
+.wh-100 {                                                      
+  width: 100%;                                             /* << width: 100% */
+}
+.wh-half {                                                      
+  width: 50%;                                               /* << width: 50% */
+}
+.wh-1rm {                                                      
+  width: 1rem;                                             /* << width: 1rem */
+}
+.wh-zro-1rm {                                                      
+  width: 0.1rem;                                         /* << width: 0.1rem */
+}
+.hide,
+.wh-zro {                                                      
+  width: 0;                                                   /* << width: 0 */
+}
+.show,
+.wh-auto {                                                      
+  width: auto;                                             /* << width: auto */
+}
+
+/*\   \   \   \   \   \   \   \   \   HEIGHT   /   /   /   /   /   /   /   / */
+html,
+body,
+.ht-100 {                                                
+  height: 100%;                                           /* << height: 100% */
+}
+.ht-half {                                                      
+  height: 50%;                                             /* << height: 50% */
+}
+.ht-1rm {                                                
+  height: 1rem;                                           /* << height: 1rem */
+}
+hr,
+.ht-zro-1rm {                                                
+  height: 0.1rem;                                       /* << height: 0.1rem */
+}
+.hide,
+.ht-zro {                                                
+  height: 0;                                                 /* << height: 0 */
+}
+.show,
+.ht-auto {                                                
+  height: auto;                                           /* << height: auto */
+}
+
+/* \  \  \  \  \  \  \  \  \  \  \  \  SPACE  /  /  /  /  /  /  /  /  /  /  /*/
+
+/* \   \   \   \   \   \   \   \   \   MARGIN   /   /   /   /   /   /   /   /*/
+.mgn-1rm {
+  margin: 1rem;                                           /* << margin: 1rem */
+}
+.mgn-zro-1rm {
+  margin: 0.1rem;                                       /* << margin: 0.1rem */
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+.mgn-zro {                                  
+  margin: 0;                                                 /* << margin: 0 */
+}
+.mgn-auto {                                                    
+  margin: auto;                                           /* << margin: auto */
+}
+#element {
+  margin-top: 1rem;
+}
+#element {
+  margin-right: 1rem;
+}
+#element {
+  margin-bottom: 1rem;
+}
+#element {
+  margin-left: 1rem;
+}
+
+/*\   \   \   \   \   \   \   \   \   PADDING   /   /   /   /   /   /   /   /*/
+.padng-1rem {
+  padding: 1rem;                                         /* << padding: 1rem */
+}
+.padng-zro-1rem {
+  padding: 0.1rem;                                     /* << padding: 0.1rem */
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+.padng-zro {
+  padding: 0;                                               /* << padding: 0 */
+}
+#element {
+  padding-top: 1rem;
+}
+#element {
+  padding-right: 1rem;
+}
+#element {
+  padding-bottom: 1rem;
+}
+#element {
+  padding-left: 1rem;
+}
+/*  \  \  \  \  \  \  \  \  \  \  \  PERIPHERY  /  /  /  /  /  /  /  /  /  / */
+
+/*\   \   \   \   \   \   \   \   \   COLORS   /   /   /   /   /   /   /   / */
+hr,
+.bk-colr-222 {
+  background-color: #222;                       /* << background-color: #222 */
+}
+.colr-fff {
+  color: #fff;                                             /* << color: #fff */
+}
+.colr-eee {
+  color: #eee;                                             /* << color: #eee */
+}
+.colr-888 {
+  color: #888;                                             /* << color: #888 */
+}
+.colr-000 {
+  color: #000;                                             /* << color: #000 */
+}
+button,
+textarea,
+input,
+a,
+.colr-inher {
+  color: inherit;                                       /* << color: inherit */
+}
+.hide, 
+.op-0 {
+  opacity: 0;                                               /* << opacity: 0 */
+}
+.op-half {
+  opacity: 0.5;                                           /* << opacity: 0.5 */
+}
+.show,
+.op-1 {
+  opacity: 1                                                /* << opacity: 1 */
+}
+
+/* \   \   \   \   \   \   \   BORDERS / OUTLINES   /   /   /   /   /   /   /*/
+iframe,
+button,
+textarea,
+input,
+hr,
+.border-0 {
+  border: 0;                                                 /* << border: 0 */
+}
+th,
+td,
+.border {
+  border: 1px solid #000;                       /* << border: 1px solid #000 */
+}
+.border-rad-half {
+  border-radius: 50%;        /* << make square a circle | border-radius: 50% */
+}
+button,
+.outline-0 {
+  outline: 0;                                               /* << outline: 0 */
+}
+textarea,
+input,
+.outline-color {
+  outline-color: #0cf;                             /* << outline-color: #0cf */
+}
+/*  \  \  \  \  \  \  \  \  \  \  \  \  TEXT  /  /  /  /  /  /  /  /  /  /   */
+
+/*  \   \   \   \   \   \   \   \   \   FONT   /   /   /   /   /   /   /   / */
+html,
+.nunito {
+  font-family: "Nunito", sans-serif;                    /* << font-family: ~ */
+}
+.arial {
+  font-family: "Arial", sans-serif;   /* << font-family: "Arial", sans-serif */
+}
+.font-sz-1rm {
+  font-size: 1rem;                                     /* << font-size: 1rem */
+}
+button,
+textarea,
+input,
+.font-sz-inher {
+  font-size: inherit;                               /* << font-size: inherit */
+}
+.b {
+  font-weight: bold;                                 /* << font-weight: bold */
+}
+.n {
+  font-weight: normal;                             /* << font-weight: normal */
+}
+.i {
+  font-style: italic;                               /* << font-style: italic */
+}
+.n {
+  font-style: normal;                               /* << font-style: normal */
+}
+
+/*  \   \   \   \   \   \   \   \   \   TEXT   /   /   /   /   /   /   /   / */
+.txt-aln-cntr {
+  text-align: center;                               /* << text-align: center */
+}
+.txt-aln-lt {
+  text-align: left;                                   /* << text-align: left */
+}
+.txt-aln-rt {
+  text-align: right;                                 /* << text-align: right */
+}
+.txt-aln-jst {
+  text-align: justify;                             /* << text-align: justify */
+}
+a,
+.txt-dec-none {
+  text-decoration: none;                         /* << text-decoration: none */
+}
+nav,
+.txt-trans-up {
+  text-transform: uppercase;                 /* << text-transform: uppercase */
+}
+.txt-trans-none {
+  text-transform: none;                         /* << text-transform: normal */
+}
+.txt-trans-cap {
+  text-transform: capitalize;               /* << text-transform: capitalize */
+}
+
+/*  \   \   \   \   \   \   \   \   \   OTHER   /   /   /   /   /   /   /   /*/
+.line-ht {
+  line-height: 1.25;                                 /* << line-height: 1.25 */
+}
+.letter-spacing {
+  letter-spacing: 0.1rem;                       /* << letter-spacing: 0.1rem */
+}
+.word-spacing {
+  word-spacing: 0.1rem;                                /* << word-spacing: ~ */
+}
+.white-space-no {
+  white-space: nowrap;                             /* << white-space: nowrap */
+}
+.white-space {
+  white-space: normal;                             /* << white-space: normal */
+}
+
+/* \  \  \  \  \  \  \  \  \  \  \  \  LISTS  /  /  /  /  /  /  /  /  /  /  /*/
+ul,
+ol {
+  list-style-type: none;                         /* << list-style-type: none */
+}
+#element {
+  list-style-type: circle;                     /* << list-style-type: circle */
+}
+#element {
+  list-style-type: decimal;                   /* << list-style-type: decimal */
+}
+
+/* \  \  \  \  \  \  \  \  \  \  \  \  TABLES  /  /  /  /  /  /  /  /  /  /  */
+.collapse {
+  border-collapse: collapse;                 /* << border-collapse: collapse */
+}
+.seperate {
+  border-collapse: separate;                 /* << border-collapse: separate */
+}
+
+/*\  \  \  \  \  \  \  \  \  \  \  \  POSITION  /  /  /  /  /  /  /  /  /  / */
+
+/*\   \   \   \   \   \   \   \   POSITION PROPERTY   /   /   /   /   /   /  */
+.v-cntr,
+.h-cntr,
+.pos-rel {  
+  position: relative;               /* << cntr = center | position: relative */
+}
+.pos-abs {  
+  position: absolute;                               /* << position: absolute */
+}
+.pos-static {  
+  position: static;                                   /* << position: static */
+}
+.pos-fixed {  
+  position: fixed;                                     /* << position: fixed */
+}
+
+/*\   \   \   \   \   \   \   \   \   LOCATIONS   /   /   /   /   /   /   /  */
+.top-0 {
+  top: 0;                                                       /* << top: 0 */
+}
+.v-cntr,
+.top-half {
+  top: 50%;                                                   /* << top: 50% */
+}
+.rt-0 {
+  right: 0;                                                   /* << right: 0 */
+}
+.rt-half {
+  right: 50%;                                               /* << right: 50% */
+}
+.btm-0 {
+  bottom: 0;                                                 /* << bottom: 0 */
+}
+.btm-half {
+  bottom: 50%;                                             /* << bottom: 50% */
+}
+.lt-0 { 
+  left: 0;                                                     /* << left: 0 */
+}
+.h-cntr
+.lt-half { 
+  left: 50%;                                                 /* << left: 50% */
+}
+
+/* \   \   \   \   \   \   \   \   \   FLOATS   /   /   /   /   /   /   /   /*/
+.float-lt { 
+  float: left;                                             /* << float: left */
+}
+.float-rt { 
+  float: right;                                           /* << float: right */
+}
+.clr-fix::after, 
+.clr-both { 
+  clear: both;                                             /* << clear: both */
+}
+
+/*  \  \  \  \  \  \  \  \  \  \  \  TRANSFORMS  /  /  /  /  /  /  /  /  /  /*/
+.v-cntr,
+.transY-neg-half {                                
+  transform: translateY( -50% );         /* << transform: translateY( -50% ) */
+}
+.h-cntr,
+.transX-neg-half {
+  transform: translateX( -50% );         /* << transform: translateX( -50% ) */
+}
+
+// \\ --- COMMENT TEMPLATE ------------------------------------------------- //
+// \\ \\\\\\\\ COMMENT-0 /////////////////////////////////////////////////// //
+  // \\ \ \ \ \ \ \ \ COMMENT-1 / / / / / / / / / / / / / / / / / / / / / // //
+    // \\ \  \  \  \  \  \  \  COMMENT-2  /  /  /  /  /  /  /  /  /  /  /  / //
+      // \\   \   \   \   \   \   \   COMMENT-3   /   /   /   /   /   /  /   //
+        // \\  \    \    \    \    \    \    COMMENT-4    /    /    /    /   //
+          // \\ \     \     \     \     \     \     COMMENT-5     /     /    //
+            // \\      \\      \      \      \      \      COMMENT-6      /  //
