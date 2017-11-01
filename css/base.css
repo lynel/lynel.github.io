@@ -1,0 +1,976 @@
+@import url( "https://necolas.github.io/normalize.css/latest/normalize.css" );
+@import url( "https://fonts.googleapis.com/css?family=Nunito:400,700" );
+html * {
+/*  outline: 1px solid red;*/
+  margin: 0;
+  padding: 0;
+}
+html,
+main,
+body,
+.work {
+  height: 100%;
+}
+html {
+  font-family: Nunito;
+  font-size: 10px;
+}
+body {
+  background-color: #fcd;
+  font-size: 1.5rem;
+}
+body {
+  overflow: hidden;
+}
+.scroll {
+  overflow-Y: auto;
+}
+header {
+  background-color: #f8f8f8;
+  z-index: 1;
+}
+header,
+.spacer,
+.tiles {
+  letter-spacing: 0.05rem;
+}
+header,
+.spacer,
+footer {
+  width: 100%;
+}
+header,
+.spacer,
+.icons,
+.tiles {
+  font-weight: bold;
+}
+header,
+.spacer,
+h1,
+.icons,
+.tiles {
+  text-transform: uppercase;
+}
+header,
+footer {
+  position: fixed;
+}
+h1,
+.home p,
+.skills p,
+.icons,
+.icons > div,
+.icons div > div,
+.front-end > div {
+  position: relative;
+}
+header ul,
+.spacer ul {
+  padding: 3vh 4vw;
+  list-style-type: none;
+}
+header ul,
+.spacer ul,
+.icons > div,
+.tiles > div, 
+.contact-hook,
+.footer-hook,
+.social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header li {
+  cursor: pointer;
+}
+header li:hover,
+.home p span,
+.skills span,
+.contact a {
+  color: #f58;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+header svg,
+.spacer svg {
+  width: 3rem;
+}
+header path:hover,
+footer path:hover {
+  fill: #f58;
+}
+main {
+  background-color: #fcd;
+  background-image: 
+    linear-gradient( 60deg, #fcd 10%, rgba( 252, 153, 177, 0.75 ) ),
+    linear-gradient( 
+      108deg, rgba( 252, 153, 177, 0.75 ) 12%, transparent 56% 
+    ),
+    url( ../img/lynel.png );
+  background-size: auto, auto, 65rem;
+  background-position: 0 0, 0 0, calc( 6.5rem + 20% ) calc( 1rem + 15% );
+}
+main,
+.tiles > div {
+  background-repeat: no-repeat;
+}
+.scroll main {
+  height: auto;
+  background-position: 0 0, 0 0, calc( 6.5rem + 20% ) bottom;
+}
+main section ,
+html .dsp-none {
+  display: none;
+}
+.home,
+html .dsp-block {
+  display: block;
+}
+h1 {
+  top: 3rem;
+  left: 1rem;
+  transform: scale( 0.9 );
+}
+h1,
+.tiles {
+  font-family: Arial;
+}
+h1 span {
+  background-color: #fd5;
+  padding: 2rem;
+}
+h1 span:nth-child( 2 ) {
+  left: 23rem;
+}
+h1 span:last-child {
+  top: 5rem;
+}
+.home p,
+.skills > p {
+  padding: 4rem;
+  top: -4rem;
+}
+.home p {
+  font-size: 3rem;
+  top: 22vh; 
+}
+.skills > p {
+  font-size: 2rem;
+}
+.icons {
+  font-size: 2.5rem;
+  top: -6rem;
+}
+.icons p {
+  transform-origin: center;
+  transform: rotate( 90deg );
+}
+.front-end {
+  color: #4aadce;
+} 
+.front-end,
+.front-end div,
+.tiles p {
+  display: inline-block;
+}
+.front-end svg {
+  width: 3rem;
+}
+.html p {
+  top: 9rem;
+  left: -2.75rem;
+}
+.css p {
+  top: 8rem;
+  left: -1.75rem;
+}
+.js p {
+  top: 12.5rem;
+  left: -6rem;  
+}
+.jq {
+  color: #fff;
+}
+.jq svg {
+  width: 4rem;
+}
+.jq p {
+  top: 12.5rem;
+  left: -3rem;  
+}
+.svg {
+  color: #f30;
+  top: 1rem;
+}
+.svg svg {
+  width: 6rem;
+}
+.svg p {
+  top: 14.75rem;
+  left: 0.25rem;    
+}
+.group2 {
+  top: 0rem;
+  left: -4rem;
+}
+.ux {
+  color: #666;
+  top: -6rem;
+  left: 4rem;
+}
+.ux svg {
+  width: 7rem;
+}
+.ux p {
+  top: 22rem;
+  left: -4rem;    
+}
+.ink {
+  color: #18c2c6;
+  top: -3rem;
+  left: 5rem;
+}
+.ink svg {
+  width: 7rem;
+}
+.ink p {
+  top: 17rem;
+  left: -3rem;    
+}
+.cc {
+  color: #d84fa3;
+  top: -9rem;
+  left: 4rem;
+}
+.cc svg {
+  width: 7rem;
+}
+.cc p {
+  top: 12rem;
+  left: -3rem;    
+}
+.work {
+  padding: 2rem;
+}
+.tiles {
+  height: 70%;
+  color: #f47;
+  background-color: #eee;
+  font-size: 3rem;
+}
+.tiles > div {
+  height: 20%;
+  padding-right: 2.5rem;
+  background-size: cover;
+}
+.interactive {
+  background-image: url( '../img/interactive.gif' );
+}
+.layout {
+  background-image: url( '../img/layout.png' );
+}
+.logo-design {
+  background-image: url( '../img/logo-design.png' );
+}
+.illustrative {
+  background-image: url( '../img/illustrative.png' );
+}
+.animation {
+  background-image: url( '../img/animation.gif' );
+}
+.tiles p {
+  margin-left: auto;
+  transform: rotate( 5deg );
+}
+.interactive-tab,
+.layout-tab,
+.logo-design-tab,
+.illustrative-tab,
+.animation-tab {
+  display: none;
+}
+.work h2 {
+  text-transform: capitalize;
+}
+figcaption {
+  padding: 1rem;
+}
+figure img {
+  width: 100%;
+}
+figure {
+  width: 90%;
+  padding: 1.2rem;
+}
+.logo-design-tab img:active {
+  transform: scale( 1.1 );
+}
+.contact {
+  padding: 6rem 2rem;
+  font-size: 2.5rem;
+}
+.contact a {
+  margin-left: 0.5rem;
+}
+.solid {
+  background-image: linear-gradient( transparent, #fcd );
+}
+.footer-hook {
+  padding: 1.5vh 4vw;
+}
+footer p {
+  margin-right: auto;
+  color: #555;
+}
+footer a {
+  width: 2.5rem;
+  margin-left: auto;
+}
+footer a:nth-of-type( 2 ) {
+  margin: 0 4vw;
+}
+h1 span:first-child,
+h1 span:nth-child( 2 ),
+h1 span:last-child,
+.icons p {
+  position: absolute;
+}
+footer {
+  bottom: 0;
+}
+
+@media( min-width: 568px ) {
+  .work > div {
+    padding: 3rem 10rem;
+  }
+  .work .tiles {
+    padding: 0;
+  }
+}
+@media( min-width: 736px ) {
+  .skills .icons {
+    transform: scale( 0.8 ) translate( 0, -3rem );
+  }
+  .icons .ux {
+    top: 3rem;
+  }
+  .icons .group2 .ux p {
+    transform: translateY( 4rem ) rotate( 90deg );
+  }  
+}
+@media( min-width: 640px ) {
+  h1 {
+    transform: scale( 1.4 ) translate( 14rem, 2rem );
+  }
+  main .home p {
+    padding: 8%;
+    font-size: 4rem;
+    top: 19rem;
+    left: -4rem;
+  }
+  .skills .icons {
+    transform: scale( 0.8 ) translate( 0, -3rem );
+  }
+  .icons div div {
+    transform: scale( 1.5 );
+  }
+  .css {
+    left: 2rem;
+  }
+  .js {
+    left: 4rem;
+  }
+  .ux {
+    top: -2rem;
+  }
+  .group1 .front-end p {
+    transform: translateY( 1.5rem ) rotate( 90deg );
+  }
+  .group2 .ux p {
+    transform: translateY( 7rem ) rotate( 90deg );
+  }
+  .contact {
+    padding: 10rem 2rem;
+    font-size: 3.5rem;
+  }
+  figure {
+    width: 31%;
+    float: left;
+    font-size: 2rem;
+  }
+  .work > div::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  figure:nth-child( odd ) {
+    margin-right: 7rem;
+  }
+  .logo-design-tab figure:nth-child( odd ) {
+    margin-left: 7rem;
+  }
+}
+@media( min-width: 768px ) {
+  header,
+  .spacer {
+    font-size: 2rem;
+  }
+  .home p {
+    padding: 7%;
+  }  
+  .scroll main {
+    height: 107%;
+  }
+  .skills .icons {
+    transform: scale( 0.8 ) translate( 0, 3rem );
+  }  
+  .group1 .front-end p {
+    transform: translateY( 0 ) rotate( 90deg );
+  }
+  .group2 {
+    top: 11rem;
+  }
+  .icons .group2 .ux p {
+    transform: translateY( 0rem ) rotate( 90deg );
+  }
+  .skills > p {
+    padding: 13rem;
+    top: 13rem;
+    font-size: 3rem;
+  }
+  .work {
+    padding: 4rem 2rem;
+  }
+  footer svg {
+    width: 3.5rem;
+  }  
+  footer svg:nth-of-type( 2 ) {
+    margin: 0 2vw;
+  }  
+  figure {
+    width: 37%;
+    font-size: 1.5rem;
+  }
+  figure:nth-child( odd ) {
+    margin-right: 6rem;
+  }
+  .work > div {
+    padding: 2rem 1rem;
+  }
+  .work .tiles {
+    transform: none;
+  }
+}
+@media( min-width: 780px ) {
+  body {
+    background-image: linear-gradient( #000 40%, #fac );
+  }
+  .work-tab main {
+    background-image: 
+      linear-gradient( 
+        60deg, rgba( 255, 204, 221, 0.82 ) 10%, rgba( 255, 34, 88, 0.23 ) 
+      ),
+      linear-gradient( 
+        108deg, rgba( 241, 86, 124, 0.75 ) 12%, transparent 56% 
+      ), url(../img/lynel.png);
+    background-position: 0 0, 0 0, calc( -25.5rem + 20% ) calc( 11rem + 15% );
+    background-size: auto, auto, 95rem;
+  }
+  h1 {
+    left: 9rem;
+  }
+  .skills > p {
+    color: #eee;
+    top: 25rem;
+  }
+  .tiles {
+    width: 50%;
+    margin-left: 44rem;
+  }
+  .work > div {
+    padding: 2rem 14rem;
+  }
+  figure {
+    width: 30%;
+  }  
+}
+@media( min-width: 1366px ) {
+  header,
+  .spacer {
+    font-size: 3rem;
+  }
+  header svg,
+  .spacer svg {
+    width: 4rem;
+  }
+  .large .home {
+    height: 100%;
+  }
+  h1 {
+    font-size: 6rem;
+    font-weight: normal;
+    text-transform: capitalize;
+    left: 44rem;
+    transform: scale( 1.2 ) translate( 1rem, 6rem );
+    z-index: 2;
+  }
+  h1 span:nth-child( 1 ) {
+    z-index: 1;
+  }  
+  h1 span:nth-child( 2 ) {
+    top: 8rem;
+    left: 0;
+  }
+  h1 span:last-child {
+    top: 8rem;
+    left: 6rem;
+  }
+  .home p {
+    display: none;
+  }
+  .large main {
+    display: block;
+    width: 100%;
+    height: calc( 100% - 6rem );
+    background-color: #fcd;
+    background-image: linear-gradient( 108deg, rgba( 252, 153, 177, 0.75 ) 12%, 
+                      transparent 56% ), url(../img/lynel.png);
+    background-repeat: no-repeat;
+    background-size: auto, 140rem;    
+    background-position: 0 0, calc( -45.5rem + 20% ) calc( 5rem + 15% );
+  }
+  .large aside {
+    width: 62%;
+    height: 100%;
+    background-color: #000;
+    background-image: url( '../img/background.png' );
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+  }
+  .large aside::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( 45deg, #000 15%, transparent 50% );
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  .large aside::after {
+    content: "";
+    width: 100%;
+    height: 100%;    
+    background-image: linear-gradient( 25deg, #456 14%, transparent 84% );
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .large aside > div {
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    opacity: 0.5;
+  }
+  .large aside div:nth-child( 1 ) {
+    width: 100%;
+  }
+  .large aside div:nth-child( 2 ) {
+    width: 75%;
+  }
+  .large aside div:nth-child( 3 ) {
+    width: 36%;
+  }
+  .large footer {
+    z-index: 2;
+  }
+  .large footer p {
+    color: #eee;
+  }
+  .large footer svg,
+  .large footer path {
+    fill: #eee;
+  }
+  footer p {
+    font-size: 2.5rem;
+  }
+  footer svg {
+    width: 4.5rem;
+  }
+}
+@media( min-width: 1440px ) {
+  h1 {
+    left: 40rem;
+  }
+  .skills > p {
+    top: 33rem;
+  }
+  .tiles {
+    margin-left: 65rem;
+  }
+  .work > div {
+    padding: 2rem 26rem;
+  }  
+}
+@media( min-width: 2560px ) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    background-color: #fcd;
+    background-image: none;
+  }
+  header ul,
+  .spacer ul {
+    padding: 2vh 3vw;
+  }
+  main .skills .icons {
+    transform: scale( 0.7 ) translate( 0, 2rem );
+  }
+  main .skills > p {
+    top: 22rem;
+  }
+  main .skills p {
+    font-size: 2rem;
+  }
+  .group2 {
+    top: 22rem;
+  }
+  footer svg:nth-of-type( 2 ) {
+    margin: 0 1vw;
+  }   
+}
+
+@media( max-width: 320px ) {
+  html {
+    font-size: 3.28vw;
+  }  
+  main {
+    background-position: 0 0, 0 0, calc( 6.5rem + 20% ) bottom;
+  }  
+}
+
+@media( min-height: 412px ) {
+  .icons {
+    transform: scale( 0.8 ) translate( 0, -4rem );
+  }
+  .ux {
+    top: 4rem;
+  }
+  .ux p {
+    top: 19.5rem;
+  }
+}
+@media( min-height: 640px ) {
+  .ux p {
+    top: 23rem;
+  }
+  .contact {
+    padding: 8rem 2rem;
+  }
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+@media( min-height: 670px ) {
+  main {
+    background-size: auto, auto, 75rem;
+  }
+}
+@media( min-height: 760px ) {
+  main {
+    background-size: auto, auto, 85rem;
+  }
+}
+@media( min-height: 855px ) {
+  main {
+    background-size: auto, auto, 95rem;
+  }
+}
+@media( min-height: 900px ) {
+  main {
+    background-position: 0 0, 0 0, calc( 6.5rem + 20% ) bottom;
+  }  
+}
+
+@media( max-height: 736px ) {
+  .icons {
+    transform: none;
+  }
+  .ux {
+    top: 0rem;
+  }
+}
+@media( max-height: 568px ) {
+  .ux p {
+    top: 22rem;
+  }
+}
+@media( max-height: 530px ) {
+  html {
+    font-size: 2vh;
+  }  
+  .home p {
+    padding: 15%;
+  }
+}
+@media( max-height: 470px ) {
+  .icons p {
+    transform: translateY( 1.75rem ) rotate( 90deg );
+  }
+}
+@media( max-height: 414px ) {
+  .tiles {
+    display: flex;
+    height: 71%;
+    font-size: 2rem;
+  }
+  .tiles > div {
+    width: 20%;
+    height: 100%;
+  }
+  .tiles p {
+    position: absolute;
+    margin-left: 1.25rem;
+  }
+  .interactive {
+    background-position: -20rem, center;
+  }
+  .layout {
+    background-position: -23rem, center;
+  }
+  .logo-design {
+    background-position: -10rem, center;
+  }
+}
+@media( max-height: 400px ) {
+  .icons p {
+    transform: translateY( 4rem ) rotate( 90deg );
+  }
+}
+@media( max-height: 340px ) {
+  .icons p {
+    transform: translateY( 6rem ) rotate( 90deg );
+  }
+}
+@media( max-height: 320px ) {
+  html {
+    font-size: 3vh;
+  }  
+  .home {
+    transform: scale( 0.9 ) translate( -4rem, -2rem );
+  }
+  .home p {
+    top: 20vh;
+    left: -8vh;
+  }
+  .icons {
+    transform: scale( 0.8 ) translate( 0, -5rem );
+  }
+  .icons p {
+    transform: translateY( 1rem ) rotate( 90deg );
+  }  
+  .tiles {
+    height: 62%;
+    font-size: 1.5rem;
+  }
+}
+@media( max-height: 200px ) {
+  html {
+    font-size: 3vh;
+  }  
+}
+@media( max-height: 112px ) {
+  html {
+    font-size: 3.5vh;
+  }  
+  .home p {
+    top: 10vh;
+    left: -22vh;
+  }  
+}
+@media( max-height: 80px ) {
+  html {
+    font-size: 4vh;
+  }  
+  .home p {
+    top: -32vh;
+    left: 80vh;
+  }  
+}
+
+@media( max-width: 320px ) and ( max-height: 320px ) {
+  html {
+    transform: scale( 4 );
+    font-size: 2.25vh;
+  }  
+  .home {
+    transform: scale( 0.9 ) translate( -4rem, -2rem );
+  }
+  .home p {
+    top: 20vh;
+    left: -8vh;
+  }
+}
+@media( max-width: 375px ) and ( max-height: 667px ) {
+  .skills .ux {
+    top: -8rem;
+  }
+}
+
+@media( min-width: 412px ) and ( min-height: 732px ) {
+  .skills .ux {
+    top: -5rem;
+  }
+}
+@media( min-width: 732px ) and ( min-height: 412px ) {
+  .skills .icons {
+    transform: scale( 0.7 ) translate( -0, -6rem );
+  }
+  .skills .ux {
+    top: 4rem;
+  }
+  .ux p {
+    top: 20rem;
+  }
+}
+@media( min-width: 736px ) and ( min-height: 414px ) {
+  .skills .ux p {
+    top: 22rem;
+  }
+}
+@media( min-width: 768px ) and ( min-height: 1024px ) {
+  main .home p {
+    top: 20rem;
+    left: -1rem;
+  }
+  .icons {
+    top: -1rem;
+  }
+  .skills > p {
+    top: 3rem;
+  }
+  .skills .ux p {
+    top: 23rem;
+  }
+  .tiles {
+    font-size: 5rem;
+  }
+}
+@media( min-width: 1024px ) and ( min-height: 768px ) {
+  .skills .icons {
+    transform: scale( 0.8 ) translate( -0, -6rem );
+    top: -1rem;
+  }
+  main .home p {
+    top: 20rem;
+    left: 0rem;
+  }  
+  .skills .ux p {
+    top: 23rem;
+  }
+}
+@media( min-width: 1024px ) and ( min-height: 1366px ) {
+  main {
+    background-size: auto, auto, 130rem;
+  }
+  .home {
+    transform: scale( 1.3 ) translate( 8rem, 3rem );
+  }
+  .skills {
+    position: relative;
+    top: 5rem;
+    transform: scale( 1.1 ) translate( 0, 6rem );
+  }
+  .skills > p {
+    color: #000;
+    font-size: 4rem;
+    top: 9rem;
+  }
+  .work-tab main {
+    background-position: 0 0, 0 0, calc( -45.5rem + 20% ) bottom;
+    background-size: auto, auto, 130rem;
+  }  
+  .tiles {
+    width: 60%;
+    height: 80%;
+    margin-left: 42rem;
+    font-size: 7rem;
+  }
+  .contact {
+    padding: 17rem 2rem;
+    font-size: 5.5rem;
+  }
+  .work > div {
+    padding: 2rem 1rem;
+    transform: translateX( 4rem );
+  }
+  figure {
+    width: 37%;
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+}
+@media( min-width: 1366px ) and ( min-height: 1024px ) {
+  .home {
+    transform: scale( 1.1 ) translate( 9rem, 1rem );
+  }
+  main .home p {
+    left: -9rem;
+  }  
+  .skills > p {
+    color: #000;
+    font-size: 4rem;
+    top: 9rem;
+  }
+  .tiles {
+    width: 55%;
+    height: 76%;
+    margin-left: 62rem;
+    font-size: 7rem;
+  }
+  .contact {
+    padding: 15rem 2rem;
+  }
+  .work-tab main {
+    background-position: 0 0, 0 0, calc( -2.5rem + 20% ) calc( 25rem + 15% );
+  }
+}
+@media( min-width: 1920px ) and ( min-height: 860px ) {
+  body {
+    background-image: none;
+  }
+  .skills .icons {
+    transform: scale( 0.8 ) translate( -0, 0rem );
+  }
+  .skills > p {
+    color: #000;
+    padding: 1rem 41rem;
+    top: 29rem;
+  }
+  .tiles {
+    height: 60%;
+    font-size: 7rem;
+    margin-left: 90rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  figure {
+    font-size: 2rem;
+  }
+  .work-tab main {
+    height: 124%;
+    background-position: 0 0, 0 0, calc( -46.5rem + 20% ) calc( 34rem + 15% );
+  }   
+  figure:nth-child( odd ) {
+    margin-right: 15rem;
+  }
+}
