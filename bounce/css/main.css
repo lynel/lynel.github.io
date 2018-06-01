@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #eee;
+  padding: 0 1vw;
+}
+#ball-root,
+#ball-parent {
+  display: inline-block;
+}
+#ball-root {
+  height: 80vh;
+  margin-top: 10vh;
+}
+#ball {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #222;
+}
+
+.move-right-animation {
+  animation-name: move-right;
+  animation-duration: 5.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;  
+}
+.bounce-animation {
+  animation-name: drop, ascent, drop-2, ascent-2, drop-3, ascent-3, drop-4;
+  animation-duration: 1s, 0.8s, 1s, 0.6s, 1s, 0.2s, 0.25s;
+  animation-delay: 0s, 1s, 1.8s, 2.8s, 3.4s, 4.4s, 4.6s;
+  animation-timing-function: ease-in, ease-out, ease-in, ease-out, ease-in,
+    ease-out, ease-in;
+  animation-fill-mode: forwards;
+}
+.squash-animation {
+  animation-name: squeeze, release, squeeze-2, release-2, squeeze-3, release-3;
+  animation-duration: 1s, 1s, 0.8s, 0.8s, 0.6s, 0.2s;
+  animation-delay: 0s, 1s, 2s, 2.8s, 3.8s, 4.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX( 0 );
+  }  
+  100% {
+    transform: translateX( calc( 90vw - 10rem ) );
+  }
+}
+
+@keyframes drop {
+  100% {
+    transform: translateY( calc( 80vh - 10rem ) );
+  }
+}
+@keyframes ascent {
+  0% {
+    transform: translateY( calc( 80vh - 10rem ) );
+  }  
+  100% {
+    transform: translateY( calc( 30vh - 10rem ) );
+  }
+}
+@keyframes squeeze {
+  0% {
+    transform: scaleX( 1 );
+  }
+  95% {
+    transform: scaleX( 0.8 );
+  }
+  100% {
+    transform: scaleX( 1 ) scaleY( 0.75 );
+  }
+}
+@keyframes release {
+  0% {
+    transform: scaleX( 1 ) scaleY( 0.75 );
+  }
+  5% {
+    transform: scaleX( 0.8 ) scaleY( 1 );
+  }
+  100% {
+    transform: scaleX( 1 );
+  }
+}
+
+@keyframes drop-2 {
+  0% {
+    transform: translateY( calc( 30vh - 10rem ) );
+  }  
+  100% {
+    transform: translateY( calc( 80vh - 10rem ) );
+  }
+}
+@keyframes ascent-2 {
+  0% {
+    transform: translateY( calc( 80vh - 10rem ) );
+  }  
+  100% {
+    transform: translateY( calc( 50vh - 10rem ) );
+  }
+}
+@keyframes squeeze-2 {
+  0% {
+    transform: scaleX( 1 );
+  }
+  95% {
+    transform: scaleX( 0.85 );
+  }
+  100% {
+    transform: scaleX( 1 ) scaleY( 0.8 );
+  }
+}
+@keyframes release-2 {
+  0% {
+    transform: scaleX( 1 ) scaleY( 0.8 );
+  }
+  5% {
+    transform: scaleX( 0.85 ) scaleY( 1 );
+  }
+  100% {
+    transform: scaleX( 1 );
+  }
+}
+
+
+@keyframes drop-3 {
+  0% {
+    transform: translateY( calc( 50vh - 10rem ) );
+  }  
+  100% {
+    transform: translateY( calc( 80vh - 10rem ) );
+  }
+}
+@keyframes ascent-3 {
+  0% {
+    transform: translateY( calc( 80vh - 10rem ) );
+  }  
+  100% {
+    transform: translateY( calc( 75vh - 10rem ) );
+  }
+}
+@keyframes squeeze-3 {
+  0% {
+    transform: scaleX( 1 );
+  }
+  95% {
+    transform: scaleX( 0.9 );
+  }
+  100% {
+    transform: scaleX( 1 ) scaleY( 0.85 );
+  }
+}
+@keyframes release-3 {
+  0% {
+    transform: scaleX( 1 ) scaleY( 0.85 );
+  }
+  5% {
+    transform: scaleX( 0.9 ) scaleY( 1 );
+  }
+  100% {
+    transform: scaleX( 1 );
+  }
+}
+
+@keyframes drop-4 {
+  0% {
+    transform: translateY( calc( 75vh - 10rem ) );
+  }  
+  100% {
+    transform: translateY( calc( 80vh - 10rem ) );
+  }
+}
